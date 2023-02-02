@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fin">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="pankkiskripti.js"></script>
+</head>
+<body onload="tili1.naytaTiedot()">
+    <p id="tietoja"></p>
+    <button onclick="tili1.talleta(); tili1.naytaTiedot()">Talleta rahaa</button>
+    <button onclick="tili1.nosta(); tili1.naytaTiedot()">Nosta rahaa</button>
+    <button onclick="tili1.naytaHistoria()">Näytä historia</button><br>
+    <p id="historia"></p>
+</body>
+</html>
