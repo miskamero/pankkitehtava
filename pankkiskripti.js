@@ -30,3 +30,4 @@ class pankki {
     }
 }
 let tili1 = new pankki("FI286917472098");
+console.log("muokkaus :)")
