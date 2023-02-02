@@ -2,6 +2,8 @@ var rahaMaara;
 // let date = new Date();
 // console.log(date)
 
+
+
 class pankki {
     constructor(tilinumero = "", saldo = 0, historia = []) {
       this.tilinumero = tilinumero;
@@ -17,8 +19,13 @@ class pankki {
     nosta() {
         rahaMaara = parseInt(prompt("Kuinka paljon nostetaan rahaa?"))
         let date = new Date();
-        this.historia.push(date + " Nosto " + rahaMaara + "€" + " Saldo ennen tapahtumaa: " + this.saldo + "€" + "<br>");
-        this.saldo -= rahaMaara;
+        if (rahaMaara <= this.saldo) {
+          this.saldo -= rahaMaara;
+          this.historia.push(date + " Nosto " + rahaMaara + "€" + " Saldo ennen tapahtumaa: " + this.saldo + "€" + "<br>");
+        }else {
+          alert("Tililläsi ei ole tarpeeksi katetta.")
+        }
+        
     }
     naytaTiedot() {
       document.getElementById("tietoja").innerHTML =
@@ -30,4 +37,4 @@ class pankki {
     }
 }
 let tili1 = new pankki("FI286917472098");
-console.log("muokkaus :)")
+console.log("Muokkaus :)")
