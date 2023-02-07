@@ -7,11 +7,13 @@
     <title>Document</title>
     <script defer src="pankkiskripti.js"></script>
 </head>
-<body onload="tili1.naytaTiedot()">
+<body onload="kysyTili(); tili2.tarkistaIBAN(); tili2.naytaTiedot()">
     <p id="tietoja"></p>
-    <button onclick="tili1.talleta(); tili1.naytaTiedot()">Talleta rahaa</button>
-    <button onclick="tili1.nosta(); tili1.naytaTiedot()">Nosta rahaa</button>
-    <button onclick="tili1.naytaHistoria()">Näytä historia</button><br>
+    <p id="nostoErr"></p>
+    <button onclick="tili2.naytaTiedot()">Näytä Tiedot</button>
+    <button onclick="tili2.talleta(); tili2.naytaTiedot()">Talleta rahaa</button>
+    <button onclick="tili2.nosta(); tili2.tarkistaRaha(); tili2.naytaTiedot()">Nosta rahaa</button>
+    <button onclick="tili2.naytaHistoria()">Näytä historia</button><br>
     <p id="historia"></p>
 </body>
 </html>
